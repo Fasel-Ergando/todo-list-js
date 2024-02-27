@@ -1,0 +1,204 @@
+/* RESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+}
+
+/* UTILITY CLASSES */
+.filters .active {
+  color: hsl(0, 0%, 0%, 0.7);
+  background-color: white;
+}
+
+.scrollBar {
+  overflow-y: scroll;
+}
+
+.scrollBar::-webkit-scrollbar {
+  width: 5px;
+  background-color: lightgray;
+  border-radius: 10px;
+}
+
+.scrollBar::-webkit-scrollbar-thumb {
+  width: 5px;
+  height: 10px;
+  background-color: rgb(116, 115, 115);
+  border-radius: 10px;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.task-not-defined {
+  color: #2980b9;
+  text-align: center;
+  padding: 10px;
+}
+
+/* GENERAL STYLES */
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #a6c0fe, #f68084);
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  height: fit-content;
+  margin-top: 50px;
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+
+/* Styling the logo*/
+.todo-logo {
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  color: hsla(0, 0%, 0%, 0.7);
+}
+
+.todo-logo img {
+  margin-left: 5px;
+}
+
+/* Styling the add task input area and the add task button */
+.addTask {
+  margin-top: 10px;
+  display: flex;
+}
+
+.taskInput {
+  border: 1px solid #ccc;
+  height: 50px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 280px;
+  font-size: 17px;
+  outline: none;
+  padding: 0 20px;
+  margin-right: 10px;
+}
+
+.taskInput:focus {
+  padding-inline: 19px;
+  border: 2px solid #f68084;
+}
+
+.taskInput::placeholder {
+  color: #d3d3d3;
+}
+
+.addBtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  padding: 11px 10px;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #3498db, #2980b9);
+  color: white;
+  cursor: pointer;
+}
+
+/* Styling the filters */
+.filters {
+  margin: 20px 0;
+  padding: 10px;
+  display: flex;
+  color: white;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #3498db, #f68084);
+}
+
+.filters div {
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 500;
+  padding: 5px;
+}
+
+.filters div:hover {
+  background-color: white;
+  color: hsla(0, 0%, 0%, 0.7);
+}
+
+/* Styling the task display area*/
+.displayTask {
+  max-height: 330px;
+}
+.userTask {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.userTask:last-child {
+  border-bottom: none;
+}
+
+.taskBody {
+  display: flex;
+}
+
+.taskBody img {
+  max-width: 25px;
+  max-height: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.taskName {
+  max-width: 210px;
+  max-height: 100px;
+  cursor: default;
+  overflow-wrap: break-word;
+  user-select: none;
+}
+
+.deleteTask {
+  background-image: url('../Assets/trash.svg');
+  background-position: center;
+  background-size: 20px;
+  background-repeat:  no-repeat;
+  width: 35px;
+  height: 35px;
+  margin-left: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 100ms;
+}
+
+.deleteTask:hover {
+  background-color: #e9e8e8;
+}
+
+/* Responsive layout */
+@media (max-width: 450px) {
+  body {
+    padding: 20px;
+  }
+  .container {
+    padding: 15px;
+  }
+
+  .todo-logo {
+    font-size: 23px;
+  }
+  .todo-logo img {
+    height: 27px;
+  }
+
+  .filters {
+    width: fit-content;
+    margin: 15px auto;
+  }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo list - JS</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <link rel="shortcut icon" href="Assets/icon.ico" type="image/x-icon">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="todo-logo">
+      To-do List
+      <img src="Assets/list-icon.svg" alt="Icon">
+    </div>
+    <div class="addTask">
+      <input type="text" placeholder="Add a new task" class="taskInput">
+      <button class="addBtn">Add</button>
+    </div>
+    <div class="filters">
+      <div class="all active" data-filterName="all">All</div>
+      <div class="progress" data-filterName="progress">Progress</div>
+      <div class="finished" data-filterName="finished">Finished</div>
+    </div>
+    <div class="displayTask"></div>
+  </div>
+  <script src="JS/main.js"></script>
+</body>
+</html>
